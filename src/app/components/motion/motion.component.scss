@@ -1,0 +1,41 @@
+.sensor-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #000000; /* Fondo negro */
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+
+  .sensor-section {
+    background-color: #2a2a2a; /* Fondo gris oscuro para cada sección */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #9b00b2; /* Borde morado neón */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px); /* Efecto de movimiento al pasar el ratón */
+      box-shadow: 0 6px 15px rgba(155, 0, 178, 0.5); /* Resplandor morado en hover */
+    }
+
+    h2 {
+      color: #9b00b2; /* Título en color morado neón */
+      margin-bottom: 15px;
+      font-size: 24px;
+      text-shadow: 0 0 5px #9b00b2, 0 0 10px #9b00b2; /* Resplandor de texto */
+    }
+
+    .sensor-data {
+      display: grid;
+      gap: 10px;
+
+      p {
+        margin: 0;
+        font-size: 16px;
+        color: #ddd; /* Texto gris claro */
+        text-shadow: 0 0 5px #9b00b2, 0 0 10px #9b00b2; /* Resplandor morado */
+      }
+    }
+  }
+}
