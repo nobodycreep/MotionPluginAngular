@@ -3,8 +3,8 @@
     <div class="liquid-container">
       <div 
         class="bubble" 
-        [style.left.%]="calculateBubblePosition(motionData.rotation?.beta)"
-        [style.top.%]="calculateBubblePosition(motionData.rotation?.gamma)"
+        [style.left.%]="bubblePosition.x"
+        [style.top.%]="bubblePosition.y"
       ></div>
     </div>
     <div class="level-markings">
