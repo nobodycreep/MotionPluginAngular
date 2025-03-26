@@ -10,7 +10,6 @@ import { MotionData } from './Model/MotionData.model';
 export class MotionComponent implements OnInit, OnDestroy {
   
   constructor(private motionS: MotionService) {}
-
   motionData: MotionData = {};
 
   ngOnInit(): void {
@@ -22,5 +21,11 @@ export class MotionComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.motionS.stopMotionDetection();
+  }
+
+  calculateBubblePosition(angle?: number): number {
+    if (!angle) return 50;
+    // Mapea el ángulo a una posición entre 0 y 100
+    return Math.min(Math.max(50 + angle, 0), 100);
   }
 }

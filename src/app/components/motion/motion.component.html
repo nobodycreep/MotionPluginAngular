@@ -1,19 +1,15 @@
-<div class="sensor-container">
-  <div class="sensor-section">
-    <h2>Acelerómetro</h2>
-    <div class="sensor-data">
-      <p>X: {{motionData.acceleration?.x ?? 'No data'}}</p>
-      <p>Y: {{motionData.acceleration?.y ?? 'No data'}}</p>
-      <p>Z: {{motionData.acceleration?.z ?? 'No data'}}</p>
+<div class="level-container">
+  <div class="level-body">
+    <div class="liquid-container">
+      <div 
+        class="bubble" 
+        [style.left.%]="calculateBubblePosition(motionData.rotation?.beta)"
+        [style.top.%]="calculateBubblePosition(motionData.rotation?.gamma)"
+      ></div>
     </div>
-  </div>
-
-  <div class="sensor-section">
-    <h2>Giroscopio</h2>
-    <div class="sensor-data">
-      <p>Alpha: {{motionData.rotation?.alpha ?? 'No data'}}°</p>
-      <p>Beta: {{motionData.rotation?.beta ?? 'No data'}}°</p>
-      <p>Gamma: {{motionData.rotation?.gamma ?? 'No data'}}°</p>
+    <div class="level-markings">
+      <div class="marking-vertical"></div>
+      <div class="marking-horizontal"></div>
     </div>
   </div>
 </div>
